@@ -8,7 +8,9 @@ namespace BranchesAndLoops
         {
             // ExploreIf();
             // ExploreWhileLoop();
-            DoWhileLoop();
+            // DoWhileLoop();
+            // ForLoop();
+            FindSum();
         }
         static void ExploreIf()
         {
@@ -24,19 +26,47 @@ namespace BranchesAndLoops
             }
         }
 
-        static void ExploreWhileLoop() {
+        static void ExploreWhileLoop()
+        {
             int counter = 0;
-            while (counter < 10) {
+            while (counter < 10)
+            {
                 Console.WriteLine($"Hello World! Counter = {counter}");
                 counter++;
             }
         }
-        static void DoWhileLoop() {
+        static void DoWhileLoop()
+        {
             int counter = 0;
-            do {
+            do
+            {
                 Console.WriteLine($"Do while loop... Counter = {counter}");
                 counter++;
-            } while(counter < 10);
+            } while (counter < 10);
+        }
+        static void ForLoop()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"For loop... Counter = {i}");
+            }
+        }
+        static void FindSum()
+        {
+            int sum = 0;
+            for (int i = 0; i < 30; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.WriteLine($"Number {i} is divisible by 3");
+                    sum = sum + i;
+                }
+                else
+                {
+                    Console.WriteLine($"Number {i} is NOT divisible by 3");
+                }
+            }
+            Console.WriteLine($"The sum is = {sum}");
         }
     }
 }
