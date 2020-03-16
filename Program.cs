@@ -72,8 +72,19 @@ namespace BranchesAndLoops
         static void GenericList()
         {
             var names = new List<string> { "Santosh", "Roopa", "Sukruthi" };
+            names.Add("Lingaraju");
+            names.Sort();
             foreach( var name in names) {
-                Console.WriteLine(name);
+                Console.WriteLine(name.ToUpper());
+            }
+            Console.WriteLine($"My name is {names[0]}");
+            Console.WriteLine($"The list has {names.Count} names in it");
+            var nameToSearch = "Bharathi";
+            var index = names.IndexOf(nameToSearch);
+            if(index != -1) {
+                Console.WriteLine($"{nameToSearch} is in the list");
+            } else {
+                Console.WriteLine($"{nameToSearch} is not in the list");
             }
         }
     }
