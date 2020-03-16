@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BranchesAndLoops
 {
@@ -10,7 +11,8 @@ namespace BranchesAndLoops
             // ExploreWhileLoop();
             // DoWhileLoop();
             // ForLoop();
-            FindSum();
+            // FindSum();
+            GenericList();
         }
         static void ExploreIf()
         {
@@ -25,7 +27,6 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is less than 10");
             }
         }
-
         static void ExploreWhileLoop()
         {
             int counter = 0;
@@ -54,19 +55,26 @@ namespace BranchesAndLoops
         static void FindSum()
         {
             int sum = 0;
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 20; i++)
             {
                 if (i % 3 == 0)
                 {
-                    Console.WriteLine($"Number {i} is divisible by 3");
+                    // Console.WriteLine($"Number {i} is divisible by 3");
                     sum = sum + i;
                 }
                 else
                 {
-                    Console.WriteLine($"Number {i} is NOT divisible by 3");
+                    // Console.WriteLine($"Number {i} is NOT divisible by 3");
                 }
             }
             Console.WriteLine($"The sum is = {sum}");
+        }
+        static void GenericList()
+        {
+            var names = new List<string> { "Santosh", "Roopa", "Sukruthi" };
+            foreach( var name in names) {
+                Console.WriteLine(name);
+            }
         }
     }
 }
