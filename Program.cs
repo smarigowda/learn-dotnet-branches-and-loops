@@ -7,7 +7,8 @@ namespace BranchesAndLoops
         static void Main(string[] args)
         {
             // ExploreIf();
-            ExploreLoop();
+            // ExploreWhileLoop();
+            DoWhileLoop();
         }
         static void ExploreIf()
         {
@@ -23,12 +24,19 @@ namespace BranchesAndLoops
             }
         }
 
-        static void ExploreLoop() {
+        static void ExploreWhileLoop() {
             int counter = 0;
             while (counter < 10) {
                 Console.WriteLine($"Hello World! Counter = {counter}");
                 counter++;
             }
+        }
+        static void DoWhileLoop() {
+            int counter = 0;
+            do {
+                Console.WriteLine($"Do while loop... Counter = {counter}");
+                counter++;
+            } while(counter < 10);
         }
     }
 }
